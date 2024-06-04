@@ -3,14 +3,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import CraftItems from './CraftItems';
 import { useLoaderData } from 'react-router-dom';
+import { useTypewriter } from 'react-simple-typewriter'
 
 
 const Banner = () => {
-    const crafts =useLoaderData()
+    const crafts = useLoaderData()
+
+    const [text] = useTypewriter({
+        words: ['Craft Items', 'Craft Items'],
+        loop: 0
+      })
 
     return (
         <div>
-           
+
             <div className=' lg:mx-10 md:mx-2 sm:mx-1'>
                 <Swiper className=' lg:h-96 md:h-40'
                     spaceBetween={50}
@@ -24,14 +30,17 @@ const Banner = () => {
                 </Swiper>
             </div>
 
-           <div className='flex justify-center'>
-           <div>
-           <h1 className="text-5xl font-extrabold items-center text-center my-5">Craft Items</h1>
-                <div className='grid lg:grid-cols-3 md:grid-cols-2 lg:gap-5 md:gap-0'>
-                    {crafts.map(craft => <CraftItems key={craft._id} craft={craft}></CraftItems>)}
+            <div className='flex justify-center'>
+                <div>
+                    <div className='App h-20'>
+                    <h1 className="text-5xl font-extrabold items-center text-center my-5"><span>{text}</span></h1>
+                    </div>
+                    
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 lg:gap-5 md:gap-0'>
+                        {crafts.map(craft => <CraftItems key={craft._id} craft={craft}></CraftItems>)}
+                    </div>
                 </div>
             </div>
-           </div>
         </div>
     );
 };

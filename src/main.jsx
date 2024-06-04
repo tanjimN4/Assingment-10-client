@@ -16,6 +16,7 @@ import AddCraftItem from './component/AddCraftItem';
 import ViewDetails from './ViewDetails';
 import Update from './Update';
 import AuthProvider from './component/AuthProvider';
+import Private from './component/Private';
 
 
 const router = createBrowserRouter([
@@ -40,17 +41,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/allac",
-        element: <AllArtcraftItems></AllArtcraftItems>,
+        element: <Private><AllArtcraftItems></AllArtcraftItems></Private>,
         loader:()=>fetch('http://localhost:5000/craft'),
       },
       {
         path: "/manc",
-        element: <MyArtCraft></MyArtCraft>,
+        element: <Private><MyArtCraft></MyArtCraft></Private>,
         loader:()=>fetch('http://localhost:5000/craft')
       },
       {
         path: "/aci",
-        element: <AddCraftItem></AddCraftItem>,
+        element: <Private><AddCraftItem></AddCraftItem></Private>,
       },
       {
         path: "/viewdetails",
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/update/:id",
-        element: <Update></Update>,
+        element: <Private><Update></Update></Private>,
         loader:({params})=>fetch(`http://localhost:5000/craft/${params.id}`)
       },
 

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "./AuthProvider";
 import { useContext } from "react";
-import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/web-extension";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+
 
 const githubProvider = new GithubAuthProvider();
 const googleProvider = new GoogleAuthProvider();

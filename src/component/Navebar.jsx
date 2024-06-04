@@ -1,10 +1,22 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 
 
 const Navebar = () => {
     const { user,logOut} = useContext(AuthContext)
+
+    
+    const [theme, setTheme] = useState('light');
+
+    const toggleTheme = () => {
+      const newTheme = theme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
+    };
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+      }, [theme]);
+    
     
 
     const handleSignOut = () => {
@@ -43,6 +55,10 @@ const Navebar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-2">
+                <label className="switch">
+          <input type="checkbox" className="toggle" checked={theme === 'dark'} onChange={toggleTheme} />
+          <span className="slider round"></span>
+        </label>
                 {
                     user ?
                         <div className=" flex items-center">

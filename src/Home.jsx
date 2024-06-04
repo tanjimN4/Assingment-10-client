@@ -4,9 +4,12 @@ import Navebar from "./component/Navebar";
 
 import Footer from "./component/Footer";
 
+
 const Home = () => {
+   
     return (
-        <div>
+        <div >
+           
             <Navebar></Navebar>
             <Outlet></Outlet>
             <Footer></Footer>
