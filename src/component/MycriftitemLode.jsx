@@ -50,7 +50,7 @@ const MycriftitemLode = ({lode}) => {
 
                             </div>
                             <div className="card-actions ">
-                                <button className="btn btn-primary">View</button>
+                                
                                 <Link to={`/update/${_id}`}><button className="btn btn-primary">Update</button></Link>
                                 <button  onClick={()=>handleDelete(_id)}  className="btn btn-primary">Delete</button>
                             </div>

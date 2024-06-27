@@ -4,6 +4,7 @@ import 'swiper/css';
 import CraftItems from './CraftItems';
 import { useLoaderData } from 'react-router-dom';
 import { useTypewriter } from 'react-simple-typewriter'
+import ArtCraftCategories from './ArtCraftCategories';
 
 
 const Banner = () => {
@@ -40,6 +41,9 @@ const Banner = () => {
                         {crafts.map(craft => <CraftItems key={craft._id} craft={craft}></CraftItems>)}
                     </div>
                 </div>
+            </div>
+            <div>
+                <ArtCraftCategories></ArtCraftCategories>
             </div>
         </div>
     );

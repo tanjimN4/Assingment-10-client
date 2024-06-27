@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 const AllArtcraftItems = () => {
     const crafts = useLoaderData()
     return (
-        <div className="mx-10">
+        <div className="lg:mx-10 md:mx-0">
             <Fade>
             <h1 className="text-5xl font-extrabold items-center text-center my-10">All Art & craft Items</h1>
             </Fade>

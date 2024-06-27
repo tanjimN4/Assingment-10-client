@@ -17,6 +17,7 @@ import ViewDetails from './ViewDetails';
 import Update from './Update';
 import AuthProvider from './component/AuthProvider';
 import Private from './component/Private';
+import ArtCraftCategories from './component/ArtCraftCategories';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,12 @@ const router = createBrowserRouter([
         element: <Banner></Banner>,
         loader:()=>fetch('http://localhost:5000/craft'),
       },
+      {
+        path:'/',
+        element:<ArtCraftCategories></ArtCraftCategories>,
+        loader:()=>fetch('http://localhost:5000/craft2')
+      }
+      ,
       
       {
         path: "/login",
