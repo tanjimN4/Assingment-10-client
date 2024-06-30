@@ -27,7 +27,7 @@ const Update = () => {
 
         //send data to the server
 
-        fetch(`http://localhost:5000/craft/${_id}`,{
+        fetch(`https://assingment-10-server-delta.vercel.app/craft/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

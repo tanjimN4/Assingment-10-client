@@ -29,12 +29,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Banner></Banner>,
-        loader:()=>fetch('http://localhost:5000/craft'),
+        loader:()=>fetch('https://assingment-10-server-delta.vercel.app/craft'),
       },
       {
         path:'/',
         element:<ArtCraftCategories></ArtCraftCategories>,
-        loader:()=>fetch('http://localhost:5000/craft2')
+        loader:()=>fetch('https://assingment-10-server-delta.vercel.app/craft2')
       }
       ,
       
@@ -49,12 +49,12 @@ const router = createBrowserRouter([
       {
         path: "/allac",
         element: <Private><AllArtcraftItems></AllArtcraftItems></Private>,
-        loader:()=>fetch('http://localhost:5000/craft'),
+        loader:()=>fetch('https://assingment-10-server-delta.vercel.app/craft'),
       },
       {
         path: "/manc",
         element: <Private><MyArtCraft></MyArtCraft></Private>,
-        loader:()=>fetch('http://localhost:5000/craft')
+        loader:()=>fetch('https://assingment-10-server-delta.vercel.app/craft')
       },
       {
         path: "/aci",
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <Private><Update></Update></Private>,
-        loader:({params})=>fetch(`http://localhost:5000/craft/${params.id}`)
+        loader:({params})=>fetch(`https://assingment-10-server-delta.vercel.app/craft/${params.id}`)
       },
 
     ]

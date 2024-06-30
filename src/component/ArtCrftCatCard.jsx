@@ -23,7 +23,7 @@ const ArtCrftCatCard = ({craft}) => {
                         <p>Rating : {rating}</p>
                     </div>
                     <div className="card-actions">
-                        <Link to='/viewdetails'><button className="btn btn-primary">View Details</button></Link>
+                        <Link to='`/viewdetails/`'><button className="btn btn-primary">View Details</button></Link>
                     </div>
                 </div>
             </div>

@@ -27,7 +27,7 @@ const AddCraftItem = () => {
 
         //send data to the server
 
-        fetch('http://localhost:5000/craft',{
+        fetch('https://assingment-10-server-delta.vercel.app/craft',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
