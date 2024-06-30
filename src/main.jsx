@@ -61,8 +61,9 @@ const router = createBrowserRouter([
         element: <Private><AddCraftItem></AddCraftItem></Private>,
       },
       {
-        path: "/viewdetails",
+        path: "/viewdetails/:_id",
         element: <ViewDetails></ViewDetails>,
+        loader:()=>fetch('https://assingment-10-server-delta.vercel.app/craft')
       },
       {
         path: "/update/:id",

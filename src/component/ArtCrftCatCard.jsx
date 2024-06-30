@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ArtCrftCatCard = ({craft}) => {
 
-    const {User_Name,User_Email,name,subcategory_Name,short_description,price,rating,yesno,processing_time,stocks,image}=craft
+    const {_id,User_Name,User_Email,name,subcategory_Name,short_description,price,rating,yesno,processing_time,stocks,image}=craft
 
     const handleclick=() =>{
         console.log('good');
@@ -23,7 +23,7 @@ const ArtCrftCatCard = ({craft}) => {
                         <p>Rating : {rating}</p>
                     </div>
                     <div className="card-actions">
-                        <Link to='`/viewdetails/`'><button className="btn btn-primary">View Details</button></Link>
+                        <Link to={`/viewdetails/${_id}`}><button className="btn btn-primary">View Details</button></Link>
                     </div>
                 </div>
             </div>
